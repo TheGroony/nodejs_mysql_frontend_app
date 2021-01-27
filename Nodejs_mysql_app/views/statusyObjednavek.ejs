@@ -1,0 +1,23 @@
+<%- include("partials/header") %>
+<%- include("partials/buttons") %>
+<main>
+    <h3 class="nazevTabulky">Tabulka statusy objednávek</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>ID Statusu Objednávky</th>
+                <th>Popis</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(let i = 0; i < data.length; i++){ %>
+                <tr>
+                    <td><%= data[i].id_statusu_objednavky %></td>
+                    <td><%= data[i].popis %></td>
+                </tr>
+                <% } %>
+        </tbody>
+    </table>
+</main>
+<%- include("partials/sqlButtons") %>
+<%- include("partials/footer") %>

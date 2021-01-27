@@ -1,0 +1,27 @@
+<%- include("partials/header") %>
+<%- include("partials/buttons") %>
+<main>
+    <h3 class="nazevTabulky">Tabulka objednané zboží</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>ID Objednávky</th>
+                <th>ID Produktu</th>
+                <th>Množství</th>
+                <th>Cena celkem</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(let i = 0; i < data.length; i++){ %>
+                <tr>
+                    <td><%= data[i].id_objednavky %></td>
+                    <td><%= data[i].id_produktu %></td>
+                    <td><%= data[i].mnozstvi %></td>
+                    <td><%= data[i].cena_celkem %></td>
+                </tr>
+                <% } %>
+        </tbody>
+    </table>
+</main>
+<%- include("partials/sqlButtons") %>
+<%- include("partials/footer") %>

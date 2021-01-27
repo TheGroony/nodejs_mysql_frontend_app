@@ -1,0 +1,33 @@
+<%- include("partials/header") %>
+<%- include("partials/buttons") %>
+<main>
+    <h3 class="nazevTabulky">Výběrový dotaz - poslední objednávka</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>ID Objednávky</th>
+                <th>ID Zákazníka</th>
+                <th>Datum objednání</th>
+                <th>Status objednávky</th>
+                <th>Odesláno</th>
+                <th>ID Dopravce</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(let i = 0; i < data.length; i++){ %>
+                <tr>
+                    <td><%= data[i].id_objednavky %></td>
+                    <td><%= data[i].id_zakaznika %></td>
+                    <td><%= data[i].datum_objednani.getUTCFullYear() + "/" + data[i].datum_objednani.getUTCMonth() + "/" + data[i].datum_objednani.getUTCDate()%></td>
+                    <td><%= data[i].status_objednavky %></td>
+               <% if(data[i].odeslano != null) { %><td><%= data[i].odeslano.getUTCFullYear() + "/" + data[i].odeslano.getUTCMonth() + "/" + data[i].odeslano.getUTCDate()%></td> <% }
+               else {
+               %> <td>neodesláno</td> <% }%>
+                    <td><%= data[i].id_dopravce %></td>
+                </tr>
+                <% } %>
+        </tbody>
+    </table>
+</main>
+<%- include("partials/sqlButtons") %>
+<%- include("partials/footer") %>

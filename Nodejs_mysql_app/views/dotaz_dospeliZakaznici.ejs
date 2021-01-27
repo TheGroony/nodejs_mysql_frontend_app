@@ -1,0 +1,35 @@
+<%- include("partials/header") %>
+<%- include("partials/buttons") %>
+<main>
+    <h3 class="nazevTabulky">Výběrový dotaz - dospělí zákazníci</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>ID Zákazníka</th>
+                <th>Křestní jméno</th>
+                <th>Příjmení</th>
+                <th>Datum narození</th>
+                <th>Email</th>
+                <th>Adresa</th>
+                <th>Město</th>
+                <th>Věk zákazníka</th>
+            </tr>
+        </thead>
+        <tbody>
+            <%for(let i = 0; i < data.length; i++){ %>
+                <tr>
+                    <td><%= data[i].id_zakaznika %></td>
+                    <td><%= data[i].krestni_jmeno %></td>
+                    <td><%= data[i].prijmeni %></td>
+                    <td><%= data[i].datum_narozeni.getUTCFullYear() + "/" + data[i].datum_narozeni.getUTCMonth() + "/" + data[i].datum_narozeni.getUTCDate()%></td>
+                    <td><%= data[i].email %></td>
+                    <td><%= data[i].adresa %></td>
+                    <td><%= data[i].město %></td>
+                    <td><%= data[i].vek_zakaznika %></td>
+                </tr>
+                <% } %>
+        </tbody>
+    </table>
+</main>
+<%- include("partials/sqlButtons") %>
+<%- include("partials/footer") %>

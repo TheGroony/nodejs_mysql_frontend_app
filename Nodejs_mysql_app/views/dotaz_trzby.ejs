@@ -1,0 +1,23 @@
+<%- include("partials/header") %>
+<%- include("partials/buttons") %>
+<main>
+    <h3 class="nazevTabulky">Výběrový dotaz - tržby</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Celkem prodaných produktů</th>
+                <th>Celkové tržby</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(let i = 0; i < data.length; i++){ %>
+                <tr>
+                    <td><%= data[i].Celkem_prodanych_produktu %></td>
+                    <td><%= data[i].Celkove_trzby %></td>
+                </tr>
+                <% } %>
+        </tbody>
+    </table>
+</main>
+<%- include("partials/sqlButtons") %>
+<%- include("partials/footer") %>

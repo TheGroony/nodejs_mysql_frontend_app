@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif
+}
+
+body {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons {
+    padding: 1rem;
+    background-color: #4CAF50;
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.chyba {
+    text-align: center;
+    margin: 5rem;
+}
+
+.sqlButtons {
+    margin: 1rem;
+    padding: 1rem;
+    background-color: #4CAF50;
+    display: flex;
+    flex-flow: row wrap;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2.5rem;
+}
+
+.buttons a {
+    flex: 1 0 1;
+    text-decoration: none;
+    color:white;
+    border: 2px solid #ddd;
+    font-size: 1.5rem;
+    background-color: #4CAF50;
+    padding: 1rem;
+    margin: 0.5rem;
+    border-radius: 2.5rem;
+    transition: background-color 0.2s;
+}
+
+main {
+    margin: 2.5rem;
+}
+
+.nazevTabulky {
+    text-align: center;
+    margin: 0.5rem;
+}
+
+.sqlButtons a {
+    flex: 1 0 1;
+    text-decoration: none;
+    color:white;
+    border: 2px solid white;
+    font-size: 1rem;
+    background-color: #4CAF50;
+    padding: 1rem;
+    margin: 0.5rem;
+    border-radius: 2.5rem;
+    transition: background-color 0.2s;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+th {
+    padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+.nadpis {
+    margin: 1rem;
+}
+
+h3 {
+    margin-top: 1rem;
+}
+
+
+.buttons a:hover {
+    background-color:  #45a548;
+}
+.sqlButtons a:hover {
+    background-color: #45a548;
+}
+.buttons a:active {
+    background-color: #2b5329;
+}
+.sqlButtons a:active {
+    background-color: #2b5329;
+}

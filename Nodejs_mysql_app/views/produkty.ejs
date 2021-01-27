@@ -1,0 +1,29 @@
+<%- include("partials/header") %>
+<%- include("partials/buttons") %>
+<main>
+    <h3 class="nazevTabulky">Tabulka produkty</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>ID Produktu</th>
+                <th>Jméno</th>
+                <th>Značka</th>
+                <th>Skladem</th>
+                <th>Cena/kus</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(let i = 0; i < data.length; i++){ %>
+                <tr>
+                    <td><%= data[i].id_produktu %></td>
+                    <td><%= data[i].jmeno %></td>
+                    <td><%= data[i].znacka %></td>
+                    <td><%= data[i].skladem %></td>
+                    <td><%= data[i].cena_kus %></td>
+                </tr>
+                <% } %>
+        </tbody>
+    </table>
+</main>
+<%- include("partials/sqlButtons") %>
+<%- include("partials/footer") %>
